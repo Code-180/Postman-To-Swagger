@@ -1,0 +1,339 @@
+{
+	"info": {
+		"_postman_id": "ace7d120-edca-4da2-8d7b-998beeaee75a",
+		"name": "ABC TEST Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4244473"
+	},
+	"item": [
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "Blog List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/blog/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"blog",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blog Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "blog_title",
+									"value": "How to Create Swigger Form Postman",
+									"type": "text"
+								},
+								{
+									"key": "blog_description",
+									"value": "Blog Description",
+									"type": "text"
+								},
+								{
+									"key": "blog_tag",
+									"value": "Hello, Swigger, Postman",
+									"type": "text"
+								},
+								{
+									"key": "blog_image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/blog/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"blog",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blog Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "blog_title",
+									"value": "How to Create Swigger Form Postman",
+									"type": "text"
+								},
+								{
+									"key": "blog_description",
+									"value": "Blog Description",
+									"type": "text"
+								},
+								{
+									"key": "blog_tag",
+									"value": "Hello, Swigger, Postman",
+									"type": "text"
+								},
+								{
+									"key": "blog_image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/blog/update",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"blog",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blog Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/blog/delete?id=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"blog",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Product List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/product/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_title",
+									"value": "Test Product",
+									"type": "text"
+								},
+								{
+									"key": "product_description",
+									"value": "Test Description",
+									"type": "text"
+								},
+								{
+									"key": "product_price",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "product_discount_price",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "product_currency",
+									"value": "INR",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/product/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_title",
+									"value": "Test Product",
+									"type": "text"
+								},
+								{
+									"key": "product_description",
+									"value": "Test Description",
+									"type": "text"
+								},
+								{
+									"key": "product_price",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "product_discount_price",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "product_currency",
+									"value": "INR",
+									"type": "text"
+								},
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/product/delete",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/product/delete?id=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+			"type": "string"
+		}
+	]
+}

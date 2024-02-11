@@ -1,0 +1,195 @@
+openapi: 3.0.0
+info:
+  title: ABC TEST Project
+  version: 1.0.0
+servers:
+  - url: http://{{baseurl}}
+tags:
+  - name: Blog
+  - name: Product
+paths:
+  /blog/list:
+    get:
+      tags:
+        - Blog
+      summary: Blog List
+      parameters:
+        - name: token
+          in: header
+          schema:
+            type: string
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /blog/create:
+    post:
+      tags:
+        - Blog
+      summary: Blog Create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                blog_title:
+                  type: string
+                  example: How to Create Swigger Form Postman
+                blog_description:
+                  type: string
+                  example: Blog Description
+                blog_tag:
+                  type: string
+                  example: Hello, Swigger, Postman
+                blog_image:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /blog/update:
+    post:
+      tags:
+        - Blog
+      summary: Blog Update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  example: '1'
+                blog_title:
+                  type: string
+                  example: How to Create Swigger Form Postman
+                blog_description:
+                  type: string
+                  example: Blog Description
+                blog_tag:
+                  type: string
+                  example: Hello, Swigger, Postman
+                blog_image:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /blog/delete:
+    delete:
+      tags:
+        - Blog
+      summary: Blog Delete
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '5'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /product/list:
+    get:
+      tags:
+        - Product
+      summary: Product List
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /product/create:
+    post:
+      tags:
+        - Product
+      summary: Product Create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                product_title:
+                  type: string
+                  example: Test Product
+                product_description:
+                  type: string
+                  example: Test Description
+                product_price:
+                  type: integer
+                  example: '100'
+                product_discount_price:
+                  type: integer
+                  example: '50'
+                product_image:
+                  type: string
+                  format: binary
+                product_currency:
+                  type: string
+                  example: INR
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /product/delete:
+    post:
+      tags:
+        - Product
+      summary: Product Delete
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                product_title:
+                  type: string
+                  example: Test Product
+                product_description:
+                  type: string
+                  example: Test Description
+                product_price:
+                  type: integer
+                  example: '100'
+                product_discount_price:
+                  type: integer
+                  example: '50'
+                product_currency:
+                  type: string
+                  example: INR
+                product_image:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - Product
+      summary: Product Delete
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '10'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
